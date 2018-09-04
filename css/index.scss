@@ -1,0 +1,142 @@
+// 搜索框
+.MMM_search{
+    width: 100%;
+    position: relative;
+    background-color: #fff;
+    padding: 8px;
+    border-bottom: 1px solid #ccc;
+    input{
+        width: 100%;
+        // float:left;
+        background-color: #f1f1f1;
+        color: #9e9e9e;
+        text-indent: 2em;
+        height: 30px;
+        border-radius: 30px;
+        border: none;
+        outline: none;
+    }
+    button{
+        color: #fff;
+        position: absolute;
+        width: 63px;
+        height: 30px;
+        border-radius: 15px;
+        background-color: #ff841d;
+        text-align: center;
+        line-height: 30px;
+        right: 8px;
+        top:08px;
+         border: none;
+        outline: none;
+    }
+}
+
+// 类目菜单
+.MMM_classify{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 8px;
+    background-color: #fff;
+    a{
+        width: 25%;
+        text-align: center;
+        font-size: 13px;
+        margin-bottom: 10px;
+        img{
+            width: 70px;
+            margin: 0 auto;
+        }
+        span{
+            line-height: 33px;
+        }
+    }
+}
+// 折扣推荐线
+.MMM_save_line{
+    width: 100%;
+    a{
+        width: 100%;
+        padding: 5px;
+        // background-color: #ffa633;
+        background-image: linear-gradient(#ffac41,#ff9206);
+        span{
+            float: left;
+            color: #fff;
+        }
+        span:last-child{
+            float: right;
+        }   
+    }
+}
+
+// 折扣商品列表
+.MMM_save_list{
+    width: 100%;
+    background-color: #fff;
+    .MMM_save_item{
+        width: 100%;
+        padding: 10px;
+        position: relative;
+        border-bottom: 1px solid #ccc;
+        img{
+            width: 100px;
+            height: 100px;
+            float: left;
+            margin-right: 10px;
+        }
+        p{
+            // text-indent: 1em;
+            min-height: 59px;
+            padding-left: 30px;
+            line-height: 24px;
+            font-size: 15px;
+            text-align: left;
+            span{
+                color: #ff9b1a;
+            }
+        }
+        div{
+            color: #666;
+            font-size: 12px;
+            padding-right: 10px;
+            div{
+                float: left;
+            }
+            span{
+                float: right;
+            }
+        }
+    }
+}
+//  更多优惠
+.MMM_more_line{
+    width: 100%;
+    padding: 15px 10px;  
+    a{
+        height: 30px;
+        line-height: 30px;
+        width: 100%;
+        background-color: #fff;
+        text-align: center;
+        box-shadow: 0 0 10px 0 #ccc;  
+          }
+}
+// 品牌大全线
+.MMM_brand_line{
+    width: 100%;
+    a{
+        width: 100%;
+        padding: 5px;
+        // background-color: #ffa633;
+        background-image: linear-gradient(#ffac41,#ff9206);
+        span{
+            float: left;
+            color: #fff;
+        }
+        span:last-child{
+            float: right;
+        }   
+    }
+}
