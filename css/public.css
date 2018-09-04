@@ -1,1 +1,73 @@
-/* No CSS *//*# sourceMappingURL=public.css.map */
+header {
+  width: 100%;
+  background-color: #ff841d;
+  padding: 5px;
+}
+
+header .MMMM_header_logo {
+  float: left;
+  margin-top: 5px;
+}
+
+header .MMMM_header_logo a {
+  max-width: 185px;
+}
+
+header .MMM_header_down {
+  margin-top: 5px;
+  width: 34px;
+  height: 34px;
+  float: right;
+}
+
+foot {
+  width: 100%;
+}
+
+foot > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+foot > ul li {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center;
+  height: 34px;
+  line-height: 34px;
+}
+
+foot > ul li:nth-child(2) {
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+
+foot .MMM_footer p:first-child {
+  width: 100%;
+  display: block;
+  text-align: center;
+}
+
+foot .MMM_footer p:first-child a {
+  text-decoration: none;
+  display: inline;
+  color: red;
+  text-align: center;
+}
+
+foot .MMM_footer p:first-child a:nth-child(2) {
+  color: #000;
+}
+
+foot .MMM_footer p:first-child a:last-child {
+  color: #999;
+}
+
+foot .MMM_footer p:last-child {
+  text-align: center;
+}
+/*# sourceMappingURL=public.css.map */
