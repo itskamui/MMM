@@ -13,11 +13,19 @@ header .MMMM_header_logo a {
   max-width: 185px;
 }
 
+header .MMMM_header_logo a img {
+  width: 100%;
+}
+
 header .MMM_header_down {
   margin-top: 5px;
   width: 34px;
   height: 34px;
   float: right;
+}
+
+header .MMM_header_down img {
+  width: 100%;
 }
 
 foot {

@@ -1,0 +1,146 @@
+header{
+    background-color: #fff;
+    width: 100%;
+    padding: px;
+    display: flex;
+    justify-content: space-between;
+    padding:10px;
+    border-bottom: 1px solid #ccc;
+    .MMMM_save_logo{
+         float: left;
+        margin-top:5px;
+    a{
+            height: 24px;
+            margin: 0;
+            padding: 0;
+            img{               
+                height: 100%;
+            }
+        }
+    }
+    
+    .save_header_search{
+        width: 50%;
+        margin: 0 auto;
+        // display: flex;
+        position: relative;
+        button{
+            background-color: #f9f9f9;            
+            position: absolute;
+            border: none;
+            outline: none;
+            height: 30px;
+            left:10px;
+        }
+        input{
+        width: 100%;
+        // height: 100%;
+        border: none;
+        outline: none;
+        text-indent: 2em;
+        height: 30px;            
+        background-color: #f9f9f9;
+        border-radius: 10px;
+        }
+    }
+    .MMM_header_down{
+        color: red;
+        width: 38px;
+        height: 22px;
+        border-radius: 10px;
+        border: 1px solid currentColor;
+        // float: right;
+    }
+}
+
+// 导航
+nav{
+    // padding:0 5px;
+    // padding-right: 5px;
+    height: 40px;
+    background-color: #fff;
+    margin-bottom: 15px;
+    overflow: hidden;
+   ul{
+       li{
+           width: 84px;
+        //    height: 40px;
+        position: relative;
+            float: left;           
+                a{
+                text-align: center;
+                line-height: 40px;
+                font-size: 15px;
+                color: #333;
+                font-weight: 700;
+            }
+       }
+       .select{
+           a{
+           color: #f95d13;               
+            border-bottom:1px solid currentColor;
+           }
+       }
+   }
+}
+// 商品
+.MMM_save_list{
+    width: 100%;
+    background-color: #fff;
+    .MMM_save_item{
+        width: 100%;
+        padding: 10px;
+        position: relative;
+        border-bottom: 1px solid #ccc;
+        img{
+            width: 100px;
+            height: 100px;
+            float: left;
+            margin-right: 10px;
+        }
+        p{
+            // text-indent: 1em;
+            min-height: 59px;
+            padding-left: 30px;
+            line-height: 24px;
+            font-size: 15px;
+            text-align: left;
+            span{
+                color: #ff9b1a;
+            }
+        }
+        div{
+            color: #666;
+            font-size: 12px;
+            padding-right: 10px;
+            div{
+                float: left;
+            }
+            span{
+                float: right;
+            }
+        }
+    }
+}
+
+// 页面按钮
+.save_button{
+    ul{
+        display: flex;
+        justify-content: space-between;
+        padding: 5px 50px;
+        li{
+        }
+        li:nth-child(2){
+            
+            width: 50px;
+            height: 20px; 
+            input{
+                width: 100%;
+                height: 100%;
+                background-color: #dddddd;
+                
+            }           
+        }
+    }
+}

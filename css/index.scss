@@ -52,6 +52,9 @@
             line-height: 33px;
         }
     }
+    >a:nth-last-child(-n+4){
+       display: none;
+    }
 }
 // 折扣推荐线
 .MMM_save_line{

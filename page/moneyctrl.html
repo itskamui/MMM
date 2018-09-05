@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/moneyctrl.css">    
+</head>
+<body>
+   <header class="clearfix">
+        <div class="MMMM_save_logo">
+            <a href="../index.html">
+            <img src="../images/mlogo.png" alt="">                
+            </a>
+        </div>
+        <div class="save_header_search">
+            <button>x</button>
+            <input type="text" placeholder="搜索商品性价比">
+        </div>
+        <div class="MMM_header_down">
+            <a href="#">下载</a>
+        </div>
+    </header> 
+    <!--导航页-->
+    <nav class="clearfix">
+        <ul>
+            <li>
+                <a href="../index.html">首页</a>
+            </li>
+            <li class="select">
+                <a href="../index.html">省钱控</a>
+            </li><li>
+                <a href="../index.html">比价搜索</a>
+            </li><li>
+                <a href="../index.html">国内折扣</a>
+            </li><li>
+                <a href="../index.html">查历史价</a>
+            </li><li>
+                <a href="../index.html">白菜价</a>
+            </li><li>
+                <a href="../index.html">小时风云榜</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!--产品-->
+       <!--折扣产品列表-->
+        <div class="MMM_save_list">
+            <!--<div class="MMM_save_item clearfix">
+                <img src="./uploads/MMM_save_items1.jpg" alt="">
+                <p>BELO 白露 密封米桶 大号 10kg装*4件 <span>112元包邮(双重优惠)</span></p>
+                <div>
+                    <div>京东商城|<span>09-05 00:00</span></div>
+                    <span>评论0</span>
+                </div>
+            </div>
+           -->
+        </div>
+        <!--页面按钮-->
+        <div class="save_button">
+            <ul class="save_pager">
+                <li class="save_previous">
+                    <button>
+                        上一页
+                    </button>
+                </li>
+                <li>
+                    <input type="text">
+                </li>
+                <li class="save_next">
+                    <button>
+                        下一页
+                    </button>
+                </li>
+            </ul>
+        </div>
+
+    <!--底部-->
+    <foot>
+        <ul>
+            <li><a href="#">登录</a></li>
+            <li><a href="#">注册</a></li>
+            <li>返回顶部</li>
+        </ul>
+        <div class="MMM_footer">
+            <p class="clearfix"><a href="#">手机APP下载</a><a href="#">慢慢买手机版</a><a href="#">--掌上比价平台</a></p>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </foot>
+</body>
+</html>
+<script src='../lib/arttemplate/template-web.js'></script>
+<script src='../lib/zepto/zepto.js'></script>
+<script type="text/template" id="MMM_save_list_template">
+{{ each arr value key}}
+    <div class="MMM_save_item clearfix">
+       <a href="#" data-saveid="{{@ value.productId}}">
+            {{@ value.productImgSm}}
+             <p>{{@ value.productName }}<span>{{@ value.productPinkage }}</span></p>
+                <div>
+            <div>京东商城|<span>{{@ value.productTime}}</span></div>
+            <span>{{@ value.productComCount}}</span>
+        </div>
+       </a>
+    </div>
+ {{/each}}   
+</script>
+<script>
+    var pagenum=1;
+    var total=0;
+    $('.save_pager li:nth-child(2) input').val(pagenum);
+    // 商品页面渲染
+     $.get("http://193.112.55.79:9090/api/getmoneyctrl",{"pageid":pagenum},function (ret) {
+      console.log(ret);
+      // template(模板的id,要渲染的数据)
+      var html=template("MMM_save_list_template",{arr:ret.result});
+      // console.log(html);
+      // 渲染
+      $(".MMM_save_list").html(html);
+      // evnetList();
+      total=ret.totalCount;
+    })
+    function page(){
+    $.get("http://193.112.55.79:9090/api/getmoneyctrl",{"pageid":pagenum},function (ret) {
+      console.log(ret);
+      // template(模板的id,要渲染的数据)
+      var html=template("MMM_save_list_template",{arr:ret.result});
+      // console.log(html);
+      // 渲染
+      $(".MMM_save_list").html(html);
+      // evnetList();
+      total=ret.totalCount;
+    })
+    }
+    // 页面按钮
+    $('.save_pager .save_previous').on('tap',function(){
+        pagenum--;
+        if(pagenum<=0){
+            alert("已经是第一页了");
+            pagenum=1;
+        };
+        console.log(pagenum);
+        page();
+        $('.save_pager li:nth-child(2) input').val(pagenum);
+    })
+    $('.save_pager .save_next').on('tap',function(){
+        pagenum++;
+        if(pagenum>=total){
+            alert("已经是最后一页");
+            pagenum=total;
+        };
+        console.log(pagenum);   
+        page();        
+        $('.save_pager li:nth-child(2) input').val(pagenum);
+    })
+    $('.save_pager li:nth-child(2) input').on('keydown',function(){
+       pagenum=$(this).val();
+       if(pagenum<=0||pagenum>total ){
+        //    alert('页面有误');
+        
+           return;
+
+       }else{
+          page();  
+       }
+    })
+</script>

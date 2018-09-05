@@ -28,14 +28,14 @@
         </div>
     <!--类目菜单-->
         <div class="MMM_classify">
-            <a href="#"><img src="./images/ic_search.png" alt=""><span>比价搜索</span></a>
-            <a href="#"><img src="./images/ic_cu.png" alt=""><span>省钱控</span></a>
+            <!--<a href="#"><img src="./images/ic_search.png" alt=""><span>比价搜索</span></a>-->
+            <!--<a href="#"><img src="./images/ic_cu.png" alt=""><span>省钱控</span></a>
             <a href="#"><img src="./images/ic_coudanpin.png" alt=""><span>国内折扣</span></a>
             <a href="#"><img src="./images/ic_bcj.png" alt=""><span>白菜价</span></a>
             <a href="#"><img src="./images/ic_temai.png" alt=""><span>小时风云榜</span></a>
             <a href="#"><img src="./images/ic_trend.png" alt=""><span>查历史价</span></a>
             <a href="#"><img src="./images/ic_pp.png" alt=""><span>品牌大全</span></a>
-            <a href="#"><img src="./images/ic_pp.png" alt=""><span>凑单品</span></a>
+            <a href="#"><img src="./images/ic_pp.png" alt=""><span>凑单品</span></a>-->
         </div>
 
     <!--折扣推荐线、-->
@@ -48,7 +48,7 @@
 
     <!--折扣产品列表-->
         <div class="MMM_save_list">
-            <div class="MMM_save_item clearfix">
+            <!--<div class="MMM_save_item clearfix">
                 <img src="./uploads/MMM_save_items1.jpg" alt="">
                 <p>BELO 白露 密封米桶 大号 10kg装*4件 <span>112元包邮(双重优惠)</span></p>
                 <div>
@@ -56,30 +56,7 @@
                     <span>评论0</span>
                 </div>
             </div>
-            <div class="MMM_save_item clearfix">
-                <img src="./uploads/MMM_save_items1.jpg" alt="">
-                <p>BELO 白露 密封米桶 大号 10kg装*4件 <span>112元包邮(双重优惠)</span></p>
-                <div>
-                    <div>京东商城|<span>09-05 00:00</span></div>
-                    <span>评论0</span>
-                </div>
-            </div>
-            <div class="MMM_save_item clearfix">
-                <img src="./uploads/MMM_save_items1.jpg" alt="">
-                <p>BELO 白露 密封米桶 大号 10kg装*4件 <span>112元包邮(双重优惠)</span></p>
-                <div>
-                    <div>京东商城|<span>09-05 00:00</span></div>
-                    <span>评论0</span>
-                </div>
-            </div>
-            <div class="MMM_save_item clearfix">
-                <img src="./uploads/MMM_save_items1.jpg" alt="">
-                <p>BELO 白露 密封米桶 大号 10kg装*4件 <span>112元包邮(双重优惠)</span></p>
-                <div>
-                    <div>京东商城|<span>09-05 00:00</span></div>
-                    <span>评论0</span>
-                </div>
-            </div>
+           -->
         </div>
 
     <!--更多优惠-->
@@ -108,5 +85,64 @@
             <p>m.manmanbuy.com</p>
         </div>
     </foot>
+
+
+        <!--{{if value.titlehref==#}}-->
+    <!--<a href="javascript:;" data-menuId="{{@ value.indexmenuId}}">-->
+    <!--{{else if value.titlehref!=#}}-->
+    <!--{{/if}}-->
 </body>
 </html>
+<script src='./lib/arttemplate/template-web.js'></script>
+<script src='./lib/zepto/zepto.js'></script>
+<script type="text/template" id="MMM_save_list_template">
+{{ each arr value key}}
+    <div class="MMM_save_item clearfix">
+       <a href="#" data-saveid="{{@ value.productId}}">
+            {{@ value.productImgSm}}
+             <p>{{@ value.productName }}<span>{{@ value.productPinkage }}</span></p>
+                <div>
+            <div>京东商城|<span>{{@ value.productTime}}</span></div>
+            <span>{{@ value.productComCount}}</span>
+        </div>
+       </a>
+    </div>
+ {{/each}}   
+</script>
+<script type="text/template" id="MMM_menu">
+{{each arr value key }}
+    <a href="./page/{{@ value.titlehref}}" data-menuId="{{@ value.indexmenuId}}">        
+        {{@ value.img}}
+        <span>{{@ value.name}}</span>
+    </a>
+{{/each}}
+</script>
+<script>
+     $.get("http://193.112.55.79:9090/api/getmoneyctrl",{"productid":1},function (ret) {
+      console.log(ret);
+      // template(模板的id,要渲染的数据)
+      var html=template("MMM_save_list_template",{arr:ret.result});
+      // console.log(html);
+      // 渲染
+      $(".MMM_save_list").html(html);
+      // evnetList();
+    })
+    $.get("http://193.112.55.79:9090/api/getindexmenu",{"productid":1},function (ret) {
+      console.log(ret);
+      // template(模板的id,要渲染的数据)
+      var html=template("MMM_menu",{arr:ret.result});
+      // console.log(html);
+      // 渲染
+      $(".MMM_classify").html(html);
+      // evnetList();
+    })
+    init();
+    function init(){
+        $('.MMM_classify').on('click','a:nth-child(8)',function(){
+            $('.MMM_classify a:nth-last-child(-n+4)').css({
+                display:'block',
+            })
+            console.log(123);
+        })
+    }
+</script>

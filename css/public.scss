@@ -7,15 +7,19 @@ header{
         margin-top:5px;
     a{
             max-width: 185px;
-
+            img{
+                width: 100%;
+            }
         }
     }
     .MMM_header_down{
-        margin-top:5px;
-        
+        margin-top:5px;        
         width: 34px;
         height: 34px;
         float: right;
+        img{
+            width: 100%;
+        }
     }
 }
 foot{

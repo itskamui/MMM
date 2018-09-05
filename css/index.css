@@ -59,6 +59,10 @@
   line-height: 33px;
 }
 
+.MMM_classify > a:nth-last-child(-n+4) {
+  display: none;
+}
+
 .MMM_save_line {
   width: 100%;
 }
