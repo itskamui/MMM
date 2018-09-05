@@ -1,0 +1,153 @@
+body {
+  background-color: #f2f2f2;
+}
+
+.goods_top {
+  width: 100%;
+}
+
+.goods_details {
+  background-color: #fff;
+  padding: 30px;
+}
+
+.goods_details .goods_img {
+  width: 100%;
+}
+
+.goods_details .goods_img img {
+  margin: 0 auto;
+}
+
+.goods_details .goods_time {
+  font-size: 12px;
+  color: #999999;
+  margin-bottom: 15px;
+}
+
+.goods_details .goods_time span {
+  display: inline-block;
+  height: 10px;
+  padding: 0 5px;
+  border-right: 1px solid #999;
+  line-height: 10px;
+}
+
+.goods_details .goods_name {
+  font-weight: 800;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.goods_details .goods_pirce {
+  color: #ff9000;
+}
+
+.goods_details .goods_link {
+  margin: 15px 0;
+}
+
+.goods_details .goods_link a {
+  height: 40px;
+  width: 150px;
+  line-height: 40px;
+  background-color: #ff9000;
+  text-align: center;
+  color: #fff;
+  border-radius: 10px;
+}
+
+.goods_details .goods_text p {
+  line-height: 24px;
+  color: #444;
+  font-size: 15px;
+}
+
+.goods_details .goods_text a {
+  display: inline;
+  color: #4682c5;
+}
+
+.comments_title {
+  font-size: 14px;
+  color: #000;
+}
+
+.comments_title span {
+  display: block;
+  padding: 5px;
+  font-size: 14px;
+  color: #000;
+}
+
+.comments_title .connments_link {
+  background-color: #fff;
+  text-align: center;
+}
+
+.comments_title .connments_link a {
+  display: inline-block;
+  color: #5a8fcb;
+  padding: 5px;
+  height: 20px;
+  line-height: 20px;
+}
+
+.hot_main {
+  width: 100%;
+  background-color: #fff;
+}
+
+.hot_main .hot_comments_lis {
+  width: 100%;
+  padding: 10px;
+  position: relative;
+  border-bottom: 1px solid #ccc;
+}
+
+.hot_main .hot_comments_lis img {
+  width: 100px;
+  height: 100px;
+  float: left;
+  margin-right: 10px;
+}
+
+.hot_main .hot_comments_lis p {
+  min-height: 59px;
+  padding-left: 30px;
+  line-height: 24px;
+  font-size: 15px;
+  text-align: left;
+}
+
+.hot_main .hot_comments_lis p span {
+  color: #ff9b1a;
+}
+
+.hot_main .hot_comments_lis div {
+  color: #666;
+  font-size: 12px;
+  padding-right: 10px;
+}
+
+.hot_main .hot_comments_lis div div {
+  float: left;
+}
+
+.hot_main .hot_comments_lis div span {
+  float: right;
+}
+
+.foot {
+  width: 100%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fdfdfd), to(#f7f7f7));
+  background-image: linear-gradient(#fdfdfd, #f7f7f7);
+  margin: 10px 0 50px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.foot a {
+  display: inline-block;
+  font-size: 14px;
+}
+/*# sourceMappingURL=goods.css.map */

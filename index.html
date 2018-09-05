@@ -98,7 +98,7 @@
 <script type="text/template" id="MMM_save_list_template">
 {{ each arr value key}}
     <div class="MMM_save_item clearfix">
-       <a href="#" data-saveid="{{@ value.productId}}">
+       <a href="./page/goodsDetails.html?goodId={{@ value.productId}}">
             {{@ value.productImgSm}}
              <p>{{@ value.productName }}<span>{{@ value.productPinkage }}</span></p>
                 <div>
@@ -117,6 +117,7 @@
     </a>
 {{/each}}
 </script>
+
 <script>
      $.get("http://193.112.55.79:9090/api/getmoneyctrl",{"productid":1},function (ret) {
       console.log(ret);
