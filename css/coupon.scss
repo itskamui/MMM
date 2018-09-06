@@ -1,0 +1,70 @@
+header{
+    width: 100%;
+    background-color: #ff841d;
+    padding: 5px;
+    position: relative;
+    color: #fff;
+    .MMMM_header_logo{
+        width: 100%;
+        float: left;
+        text-align: center;
+        margin-top:5px;
+        span:first-child{
+            float: left;
+        }
+    a{
+            max-width: 185px;
+            img{
+                width: 100%;
+            }
+        }
+    }
+    .MMM_header_down{
+        margin-top:5px;        
+        width: 34px;
+        height: 34px;
+        // float: right;
+        position: absolute;
+        right:0;
+        img{
+            width: 100%;
+        }
+    }
+}
+.gift_main{
+    width: 100%;
+    border: 2px solid red;
+    padding: 10px;
+    .gift_list{
+        width: 30%;
+        border: 1px solid #ccc;
+        text-align: center;
+        margin-right:12px;
+        display: inline-block;
+        margin-bottom: 12px;
+        img{
+            width: 70px;
+            margin: 0 auto;
+        }
+    }
+    div:last-child{
+        margin-right: none;
+    }
+
+}
+
+
+
+
+
+.foot{
+    width: 100%;
+    // background-color: #;
+    background-image: linear-gradient(#fdfdfd,#f7f7f7);
+    margin: 10px 0 20px 0;
+    border-bottom: 1px solid #ccc;
+    a{
+        display: inline-block;
+        font-size: 14px;
+    }
+}

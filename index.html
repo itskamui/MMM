@@ -75,7 +75,7 @@
         <!--底部-->
     <foot>
         <ul>
-            <li><a href="#">登录</a></li>
+            <li><a href="./page/login.html">登录</a></li>
             <li><a href="#">注册</a></li>
             <li>返回顶部</li>
         </ul>
@@ -87,10 +87,8 @@
     </foot>
 
 
-        <!--{{if value.titlehref==#}}-->
-    <!--<a href="javascript:;" data-menuId="{{@ value.indexmenuId}}">-->
-    <!--{{else if value.titlehref!=#}}-->
-    <!--{{/if}}-->
+
+     
 </body>
 </html>
 <script src='./lib/arttemplate/template-web.js'></script>
@@ -107,11 +105,16 @@
         </div>
        </a>
     </div>
- {{/each}}   
+ {{/each}} 
+ 
 </script>
 <script type="text/template" id="MMM_menu">
 {{each arr value key }}
-    <a href="./page/{{@ value.titlehref}}" data-menuId="{{@ value.indexmenuId}}">        
+      {{if value.titlehref=='#'}}
+    <a href="javascript:;" data-menuId="{{@ value.indexmenuId}}">  
+    {{ else if value.titlehref!='#' }}
+     <a href="./page/{{@ value.titlehref}}" data-menuId="{{@ value.indexmenuId}}"> 
+     {{ /if}}     
         {{@ value.img}}
         <span>{{@ value.name}}</span>
     </a>
@@ -127,7 +130,8 @@
       // 渲染
       $(".MMM_save_list").html(html);
       // evnetList();
-    })
+    })           
+          
     $.get("http://193.112.55.79:9090/api/getindexmenu",{"productid":1},function (ret) {
       console.log(ret);
       // template(模板的id,要渲染的数据)
@@ -137,13 +141,24 @@
       $(".MMM_classify").html(html);
       // evnetList();
     })
+    $('a:nth-child(8)').src="javascript:;"
     init();
     function init(){
         $('.MMM_classify').on('click','a:nth-child(8)',function(){
+            // 
             $('.MMM_classify a:nth-last-child(-n+4)').css({
                 display:'block',
             })
             console.log(123);
         })
+    }
+    // 点击按钮，返回顶部
+        $("foot ul li:last-child").on('click',function(){
+            console.log(123);
+            topFunction();
+        })
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
     }
 </script>

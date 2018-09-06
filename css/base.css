@@ -5,8 +5,15 @@
           box-sizing: border-box;
 }
 
+html {
+  -webkit-transition: scroll 1s;
+  transition: scroll 1s;
+}
+
 body {
   background-color: #f2f2f2;
+  -webkit-transition: scroll 1s;
+  transition: scroll 1s;
 }
 
 a {

@@ -1,0 +1,29 @@
+
+.gift_list{
+    .gift_title{
+        margin-top: 5px;
+        margin-bottom: 8px;
+        color: #666;
+        text-align: center;
+    }
+    .gift_kfc{
+        border-bottom: 1px solid #ccc;
+        padding: 10px;
+        img{
+            float: left;
+            width: 100px;
+        }
+     
+        .price{
+           font-size: 18px;
+           font-weight: 800;
+            span:last-child{
+                float: right;
+            }
+        }
+        .time{
+            margin-top: 10px;
+            color: #f2993f;
+        }
+    }
+}

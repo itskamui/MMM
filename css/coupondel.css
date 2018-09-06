@@ -1,0 +1,31 @@
+.gift_list .gift_title {
+  margin-top: 5px;
+  margin-bottom: 8px;
+  color: #666;
+  text-align: center;
+}
+
+.gift_list .gift_kfc {
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+}
+
+.gift_list .gift_kfc img {
+  float: left;
+  width: 100px;
+}
+
+.gift_list .gift_kfc .price {
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.gift_list .gift_kfc .price span:last-child {
+  float: right;
+}
+
+.gift_list .gift_kfc .time {
+  margin-top: 10px;
+  color: #f2993f;
+}
+/*# sourceMappingURL=coupondel.css.map */

@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+// @media screen and (width:320px){
+    html {
+        font-size: 100px;
+    }
+// }
+
+body {
+    font-size: 14px;
+}
+h1 {
+    position: relative;
+    margin: 0;
+    width: 100%;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    font-size: 0.18rem;
+    color: #fff;
+}
+img {
+    width: 100%;
+    display: block;
+}
+.cdp_header {
+    width: 100%;
+    height: 44px;
+    padding: 0 8px;
+    background-color: #ff8b00;
+    box-shadow: 0 1px 2px 2px #ddd;
+    >.cdp_back {
+        position: absolute;
+        top: 0;
+        left: 8;
+        width: 44px;
+        height: 44px;
+        line-height: 44px;
+        text-align: center;
+        font-size: 18px;
+        color: #fff;
+    }
+}
+.cdp_option {
+    .dropList {
+        ul.head_ul {
+            margin: 0;
+            padding-right: 47px;
+            position: relative;
+            height: 36px;
+            line-height: 36px;
+            text-align: center;
+            width: 100%;
+            display: flex;
+            background-color: #fff;
+            border-bottom: 1px solid #dadada;
+            box-shadow: 1px 0 2px 0 #ddd;
+            overflow: hidden;
+        }
+        li {
+            flex: 1;
+        }
+        .icon_one {
+            display: inline-block;
+            vertical-align: middle;
+            width: 24px;
+            height: 24px;
+            line-height: 24px;
+        }
+    }
+    .search {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 47px;
+        height: 36px;
+        // background: pink;
+        >i {
+            display: block;
+            height: 36px;
+            background:url("../images/icon_bar.png");
+            background-size: 220px 132px;
+            background-position: 2px -5px;
+            border-left: 1px solid #dadada;
+        }
+    }
+    .dropOneInfo {
+        width: 100%;
+        background-color: #fff;
+        position: absolute;
+        top: 36px;
+        left: 0;
+        display: none;
+        box-shadow: 1px 0 2px 0 #dadada;
+        &.active {
+            display: block;
+        }
+        >ul {
+            margin:0;
+            li {
+                padding: 0 8px;
+                line-height: 40px;
+                position: relative;
+                border-bottom: 1px solid #ddd;
+            }
+            li:last-child {
+                border-bottom: none;
+            }
+            li.on {
+                &:after {
+                    content:"";
+                    position: absolute;
+                    width: 20px;
+                    height: 20px;
+                    right: 5px;
+                    top: 10px;
+                    background: url("../images/icon_bar.png") no-repeat;
+                    background-size: 220px 132px;
+                    background-position: -180px -12px;
+                    // background: pink;
+                }
+            }
+            
+        }
+    }
+}
+
+.cdp_display {
+    .goods {
+        width: 100%;
+        >li {
+            width: 50%;
+            float: left;
+            a {
+                display: block;
+                margin: 5px;
+                background-color: #fff;
+            }
+            .imgInfo {
+                width: 100%;
+                padding: 0 5px;
+                overflow: hidden;
+                color: #333;
+                height: 14px;
+                line-height: 14px;
+                font-size: 12px;
+                margin-top: 6px;
+                text-align: left;
+            }
+            .dollar {
+                width: 100%;
+                padding: 0 5px;
+                color: red;
+                font-size: 20px;
+                >em {
+                    font-size: 10px;
+                    font-style: normal;
+                }
+            }
+        }
+    }
+}

@@ -4,8 +4,13 @@
     box-sizing: border-box;
 
 }
+html{
+    transition: scroll 1s;
+     
+}
 body{
     background-color: #f2f2f2;
+    transition: scroll 1s;
 }
 // input{
 //     border: none;

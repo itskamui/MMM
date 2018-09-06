@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 引入bootstrp样式文件 -->
+    <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.css" type="text/css" />
+    <!-- 引入基础样式 -->
+    <link rel="stylesheet" href="../css/base.css" type="text/css" />
+    <!-- 引入页面样式 -->
+    <link rel="stylesheet" href="../css/cdp.css" type="text/css" />
+    <!-- 引入字体样式 -->
+    <link rel="stylesheet" href="../fonts/font-awesome/css/font-awesome.css" />
+</head>
+<body>
+    <div class="cdp_header">
+        <a href="javascript:;" class="cdp_back glyphicon glyphicon-menu-left"></a>
+        <div class="cdp_title">
+            <h1>凑单品</h1>
+        </div>
+    </div>
+    <div class="cdp_option">
+       <div class="dropdown">
+           <div class="dropList">
+               <ul class="clearfix head_ul">
+                    <li>
+                        <a href="javascript:;">
+                            <span class="chosshop">店铺</span>
+                            <span class="icon_one glyphicon glyphicon-triangle-bottom"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <span class="chosearea">地域</span>
+                            <span class="icon_one glyphicon glyphicon-triangle-bottom"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <sapn class="chosprice">全部价格</sapn>
+                            <span class="icon_one glyphicon glyphicon-triangle-bottom"></span>
+                        </a>
+                    </li>
+               </ul>    
+           </div>
+           <div class="search">
+               <i></i>
+           </div>
+           <div class="dropOneInfo">
+               <ul class="Allshops"></ul>
+           </div>
+           <div class="dropOneInfo">
+                <ul class="Alladdress"></ul>
+            </div>
+            <div class="dropOneInfo">
+                <ul class="Allprice"></ul>
+            </div>
+       </div>
+    </div>
+
+    <div class="cdp_display">
+        <ul class="goods">
+            
+        </ul>
+    </div>
+</body>
+</html>
+    <!-- 商铺下拉列表模板 -->
+    <script type="text/template" id="shops">
+        {{each arr value index}}
+        <li>
+            <a href="javascript:;">
+                {{value.shopName}}
+            </a>
+        </li>
+        {{/each}}
+    </script> 
+
+    <!-- 地址下拉列表模板 -->
+    <script type="text/template" id="address">
+        {{each data value index}}
+        <li>
+            <a href="javascript:;">
+                {{value.areaName}}
+            </a>
+        </li>
+        {{/each}}
+    </script>
+
+    <!-- 商品展示列表 -->
+    <script type="text/template" id="goods">
+        {{each data value index}}
+        <li>
+            <a href="javascript:;">
+                <img src="{{@ value.productImg}}" alt="#" />
+                <div class="imgInfo">{{value.productName}}</div>
+                <div class="dollar">
+                    <!-- <em>&yen;</em> -->
+                    {{value.productPrice}}
+                </div>
+            </a>
+        </li>
+        {{/each}}
+    </script>
+
+    <!-- 引入jQuery文件 -->
+    <script src="../lib/jq/jquery-1.12.4.js"></script>
+    <!-- 引入bootstrap文件 -->
+    <script src="../lib/bootstrap/js/bootstrap.js"></script>
+    <!-- 引入模板引擎 -->
+    <script src="../lib/arttemplate/template-web.js"></script>
+    <!-- 引入zepto文件 -->
+    <script src="../lib/zepto/zepto.js"></script>
+    <!-- 引入文件js -->   
+    <script src="../js/cdp.js"></script>

@@ -1,0 +1,183 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  list-style: none;
+}
+
+html {
+  font-size: 100px;
+}
+
+body {
+  font-size: 14px;
+}
+
+h1 {
+  position: relative;
+  margin: 0;
+  width: 100%;
+  height: 44px;
+  line-height: 44px;
+  text-align: center;
+  font-size: 0.18rem;
+  color: #fff;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+.cdp_header {
+  width: 100%;
+  height: 44px;
+  padding: 0 8px;
+  background-color: #ff8b00;
+  -webkit-box-shadow: 0 1px 2px 2px #ddd;
+          box-shadow: 0 1px 2px 2px #ddd;
+}
+
+.cdp_header > .cdp_back {
+  position: absolute;
+  top: 0;
+  left: 8;
+  width: 44px;
+  height: 44px;
+  line-height: 44px;
+  text-align: center;
+  font-size: 18px;
+  color: #fff;
+}
+
+.cdp_option .dropList ul.head_ul {
+  margin: 0;
+  padding-right: 47px;
+  position: relative;
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #fff;
+  border-bottom: 1px solid #dadada;
+  -webkit-box-shadow: 1px 0 2px 0 #ddd;
+          box-shadow: 1px 0 2px 0 #ddd;
+  overflow: hidden;
+}
+
+.cdp_option .dropList li {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.cdp_option .dropList .icon_one {
+  display: inline-block;
+  vertical-align: middle;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+}
+
+.cdp_option .search {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 47px;
+  height: 36px;
+}
+
+.cdp_option .search > i {
+  display: block;
+  height: 36px;
+  background: url("../images/icon_bar.png");
+  background-size: 220px 132px;
+  background-position: 2px -5px;
+  border-left: 1px solid #dadada;
+}
+
+.cdp_option .dropOneInfo {
+  width: 100%;
+  background-color: #fff;
+  position: absolute;
+  top: 36px;
+  left: 0;
+  display: none;
+  -webkit-box-shadow: 1px 0 2px 0 #dadada;
+          box-shadow: 1px 0 2px 0 #dadada;
+}
+
+.cdp_option .dropOneInfo.active {
+  display: block;
+}
+
+.cdp_option .dropOneInfo > ul {
+  margin: 0;
+}
+
+.cdp_option .dropOneInfo > ul li {
+  padding: 0 8px;
+  line-height: 40px;
+  position: relative;
+  border-bottom: 1px solid #ddd;
+}
+
+.cdp_option .dropOneInfo > ul li:last-child {
+  border-bottom: none;
+}
+
+.cdp_option .dropOneInfo > ul li.on:after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: 5px;
+  top: 10px;
+  background: url("../images/icon_bar.png") no-repeat;
+  background-size: 220px 132px;
+  background-position: -180px -12px;
+}
+
+.cdp_display .goods {
+  width: 100%;
+}
+
+.cdp_display .goods > li {
+  width: 50%;
+  float: left;
+}
+
+.cdp_display .goods > li a {
+  display: block;
+  margin: 5px;
+  background-color: #fff;
+}
+
+.cdp_display .goods > li .imgInfo {
+  width: 100%;
+  padding: 0 5px;
+  overflow: hidden;
+  color: #333;
+  height: 14px;
+  line-height: 14px;
+  font-size: 12px;
+  margin-top: 6px;
+  text-align: left;
+}
+
+.cdp_display .goods > li .dollar {
+  width: 100%;
+  padding: 0 5px;
+  color: red;
+  font-size: 20px;
+}
+
+.cdp_display .goods > li .dollar > em {
+  font-size: 10px;
+  font-style: normal;
+}
+/*# sourceMappingURL=cdp.css.map */

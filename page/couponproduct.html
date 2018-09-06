@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/coupon.css">
+    <link rel="stylesheet" href="../css/coupondel.css">
+</head>
+<body>
+     <header class="clearfix">
+        
+        <div class="MMMM_header_logo">
+            
+          <a href="index.html">
+           <span><</span>            
+            </a>
+            优惠券
+        </div>
+        <div class="MMM_header_down">
+            <a href="#"><img src="../images/header_app.png" alt=""></a>
+        </div>
+    </header>
+    <div class="gift_list">
+        <div class="gift_title">
+            -点餐前出示手机中的优惠券，即可享受优惠...
+        </div>
+        <div class="gift_list_main clearfix">
+            
+        </div>
+    </div>
+    <div class="foot">
+        <a href="../index.html">首页></a>
+        <a href="#">优惠卷详情</a>
+     </div>
+      <foot>
+        <ul>
+            <li><a href="./login.html">登录</a></li>
+            <li><a href="#">注册</a></li>
+            <li>返回顶部</li>
+        </ul>
+        <!--底部-->
+        <div class="MMM_footer">
+            <p class="clearfix"><a href="#">手机APP下载</a><a href="#">慢慢买手机版</a><a href="#">--掌上比价平台</a></p>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </foot>
+</body>
+</html>
+<script src='../lib/arttemplate/template-web.js'></script>
+<script src='../lib/zepto/zepto.js'></script>
+<script type="text/template" id="gift_list">
+{{ each arr value key}}
+<div class="gift_kfc clearfix">
+    {{@value.couponProductImg}}
+    <div>{{value.couponProductName}}</div>               
+    <div class="price"><span>{{value.couponProductPrice}}</span> <span>></span></div>
+
+    <div class="time">{{value.couponProductTime}}</div>
+</div> 
+{{/each}}
+</script>
+<script>
+     function GetRequest(){  
+    //获取url中"?"符后的字串  
+    	var url = location.search;
+	   var theRequest = new Object();  
+	   if (url.indexOf("?") != -1) {  
+	      var str = url.substr(1);  
+	      strs = str.split("&");  
+	      for(var i = 0; i < strs.length; i ++) {  
+	         theRequest[strs[i].split("=")[0]]=unescape(strs[i].split("=")[1]);  
+	      }  
+	   }  
+	   return theRequest;  
+} 
+// console.log(GetRequest().goodId);
+var pid=GetRequest().couponId;
+    
+       $.get("http://193.112.55.79:9090/api/getcouponproduct",{"couponid":pid},function (ret) {
+    console.log(ret);
+    // template(模板的id,要渲染的数据)
+    var html=template("gift_list",{arr:ret.result});
+    // console.log(html);
+    // 渲染
+    $(".gift_list_main").html(html);
+    // evnetList();
+})
+</script>

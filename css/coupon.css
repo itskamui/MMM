@@ -1,0 +1,76 @@
+header {
+  width: 100%;
+  background-color: #ff841d;
+  padding: 5px;
+  position: relative;
+  color: #fff;
+}
+
+header .MMMM_header_logo {
+  width: 100%;
+  float: left;
+  text-align: center;
+  margin-top: 5px;
+}
+
+header .MMMM_header_logo span:first-child {
+  float: left;
+}
+
+header .MMMM_header_logo a {
+  max-width: 185px;
+}
+
+header .MMMM_header_logo a img {
+  width: 100%;
+}
+
+header .MMM_header_down {
+  margin-top: 5px;
+  width: 34px;
+  height: 34px;
+  position: absolute;
+  right: 0;
+}
+
+header .MMM_header_down img {
+  width: 100%;
+}
+
+.gift_main {
+  width: 100%;
+  border: 2px solid red;
+  padding: 10px;
+}
+
+.gift_main .gift_list {
+  width: 30%;
+  border: 1px solid #ccc;
+  text-align: center;
+  margin-right: 12px;
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+.gift_main .gift_list img {
+  width: 70px;
+  margin: 0 auto;
+}
+
+.gift_main div:last-child {
+  margin-right: none;
+}
+
+.foot {
+  width: 100%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fdfdfd), to(#f7f7f7));
+  background-image: linear-gradient(#fdfdfd, #f7f7f7);
+  margin: 10px 0 20px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.foot a {
+  display: inline-block;
+  font-size: 14px;
+}
+/*# sourceMappingURL=coupon.css.map */
