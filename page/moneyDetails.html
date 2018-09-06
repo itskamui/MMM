@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/moneyctrl.css">   
+    <link rel="stylesheet" href="../css/goods.css"> 
+</head>
+<body>
+    <!--顶部固定位-->
+   <div class="goods_top">
+        <!--头部-->
+        <header class="clearfix">
+            <div class="MMMM_save_logo">
+                <a href="../index.html">
+                <img src="../images/mlogo.png" alt="">                
+                </a>
+            </div>
+            <div class="save_header_search">
+                <button>x</button>
+                <input type="text" placeholder="搜索商品性价比">
+            </div>
+            <div class="MMM_header_down">
+                <a href="#">下载</a>
+            </div>
+        </header> 
+        <!--导航-->
+        <nav class="clearfix">
+            <ul>
+                <li>
+                    <a href="../index.html">首页</a>
+                </li>
+                <li class="select">
+                    <a href="../index.html">省钱控</a>
+                </li><li>
+                    <a href="../index.html">比价搜索</a>
+                </li><li>
+                    <a href="../index.html">国内折扣</a>
+                </li><li>
+                    <a href="../index.html">查历史价</a>
+                </li><li>
+                    <a href="../index.html">白菜价</a>
+                </li><li>
+                    <a href="../index.html">小时风云榜</a>
+                </li>
+            </ul>
+        </nav>
+   </div>
+
+
+    <!--商品详情页-->
+   <div class="goods_details">
+        <!--<div class="goods_img">
+            <img src="../uploads/2ecdc168991a4736ae29485d2b310455.jpg" alt="">
+        </div>
+        <div class="goods_time">
+            <span>苏宁易购</span><span>09-05 00:00</span><span>妖妖切克闹</span><sapn>慢慢买</sapn>
+        </div>
+        <div class="goods_name">VANS 范斯 AUTHENTIC VN0A38ETMT0 中性款帆布鞋</div>
+        <div class="goods_pirce">234包邮</div>
+        <div class="goods_link"><a href="#">直达链接</a></div>
+        <div class="goods_text">
+            <p>VANS是将滑板、冲浪、街舞等许多时尚元素集于一身的原创极限运动潮牌，一提起滑板不少人就会自然而然地想到VANS。随着自身经验的积累以及与各大品牌的合作，逐渐从街头运动品牌的领头者发展成为时尚潮流的标志。</p>
+            <p>而要说到VANS旗下最经典的系列，除了OLD SKOOL和SK8-HI以外，就是诞生于1966年的AUTHENTIC系列。AUTHENTIC是VANS生产的第一双鞋。其采用经典的帆布鞋面搭配超厚的华夫格生胶大底。由于出色的抓地性能而深受当时滑板运动员的喜爱。</p>
+            <p><a href="#">苏宁易购</a>目前售价234元，36-38码有货，喜欢的慢友可以考虑。</p>
+        </div>-->
+   </div>
+   <!--评论-->
+   <div class="comments_title">
+       <span>最新评论</span>
+       <div class="connments_link">
+           暂无评论，
+           <a href="#">打开APP</a>
+           参与评论
+       </div>
+   </div>
+   <div class="hot_conmments">
+       <div class="hot_title">热门推荐</div>
+       <div class="hot_main">
+           <ul>
+               
+           </ul>
+       </div>
+   </div>
+
+   <!--底部-->
+   <div class="foot">
+       <a href="../index.html">首页></a>
+       <a href="./moneyctrl.html">省钱控></a>
+       <a href="#">省钱控商品详情</a>
+   </div>
+</body>
+</html>
+<script src='../lib/arttemplate/template-web.js'></script>
+<script src='../lib/zepto/zepto.js'></script>
+<script type="text/template" id="hot_comments">
+{{ each arr value key}}
+    <div class="goods_img">
+            {{@ value.productImgLg}}
+        </div>
+        <div class="goods_time">
+            <span>苏宁易购</span><span>09-05 00:00</span><span>妖妖切克闹</span><sapn>慢慢买</sapn>
+        </div>
+        <div class="goods_name">{{ value.productName}}</div>
+        <div class="goods_pirce">{{value.productPinkage}}</div>
+        <div class="goods_link"><a href="#">直达链接</a></div>
+        <div class="goods_text">
+            <p>{{@ value.productInfo}}</p>
+            <p>{{@ value.productInfo1}}</p>
+            <p><a href="#">苏宁易购</a>{{value.productPinkage}}</p>
+    </div>
+ {{/each}}   
+</script>
+<!--<script type='text/template' id="hot_com">
+{{each arr value key }}
+    <li>
+        <div class="hot_comments_lis clearfix">
+                <a href="./page/goodsDetails.html?goodId=20">
+                <img src="http://a.manmanbuy.com:8013/cuxiaoPic/201610/201610001412282758.jpg" alt="移动端凑单品：海天 鲜味 生抽 1.28L">
+                <p>移动端凑单品：海天 鲜味 生抽 1.28L<span>10.9元</span></p>
+                    <div>
+                <div>京东商城|<span>10-25 14:10</span></div>
+                <span>有1人评论</span>
+            </div>
+        </a>
+        </div>
+    </li>
+{{/each}}
+</script>-->
+<script>
+  function GetRequest(){  
+    //获取url中"?"符后的字串  
+    	var url = location.search;
+	   var theRequest = new Object();  
+	   if (url.indexOf("?") != -1) {  
+	      var str = url.substr(1);  
+	      strs = str.split("&");  
+	      for(var i = 0; i < strs.length; i ++) {  
+	         theRequest[strs[i].split("=")[0]]=unescape(strs[i].split("=")[1]);  
+	      }  
+	   }  
+	   return theRequest;  
+} 
+// console.log(GetRequest().goodId);
+var pid=GetRequest().goodId;
+ $.get("http://193.112.55.79:9090/api/getmoneyctrlproduct",{"productid":pid},function (ret) {
+      console.log(ret);
+      // template(模板的id,要渲染的数据)
+      var html=template("hot_comments",{arr:ret.result});
+      // console.log(html);
+      // 渲染
+
+      $(".goods_details").html(html);
+      // evnetList();
+      console.log(ret.result.productComment);
+    })
+</script>
